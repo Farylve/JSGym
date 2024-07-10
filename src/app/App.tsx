@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 import './styles/index.scss';
 import {classNames} from "shared/lib/classNames/classNames";
@@ -9,6 +9,7 @@ import {MainPage} from "pages/MainPage";
 
 const App = () => {
    const { theme, toggleTheme } = useTheme();
+    
 
     return (
         <div className={classNames('app', {}, [theme])}>
